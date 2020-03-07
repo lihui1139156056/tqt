@@ -15,5 +15,12 @@ public interface CourseService {
 
     public int deleteCourseByIds(List<Long> courseIds) ;
 
-    public List<TeaCourse> findAll();
+/**
+ * @author:zjj
+ * @date 2020/3/6 14:48
+ * @description:
+ */
+    TeaCourse findCoursesById(Long courseId);
+
+    List<TeaCourse> findAll();
 }

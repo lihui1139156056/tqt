@@ -1,14 +1,14 @@
 package com.yaorange.tqt.vo;
 
 public class SeachUser {
-    private Integer classId;
+    private Long classId;
     private String stuName;
 
-    public Integer getClassId() {
+    public Long getClassId() {
         return classId;
     }
 
-    public void setClassId(Integer classId) {
+    public void setClassId(Long classId) {
         this.classId = classId;
     }
 

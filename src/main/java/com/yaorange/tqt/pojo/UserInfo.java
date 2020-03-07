@@ -1,209 +1,336 @@
 package com.yaorange.tqt.pojo;
 
-import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sys_user_info")
-public class UserInfo {
-  @Id
-  private Integer id;
-  private Integer userId;
-  private String gender;
-  private String email;
-  private Date birthdayDate;
-  private String phone;
-  private String telephone;
-  private String sortNumber;
-  private String remake;
-  private String name;
-  private String school;
-  private String major;
-  private Date fraduationDate;
-  private String noteAddress;
-  private Integer age;
-  private String eduction;
-  private Integer salary;
-  private Date joinDate;
-  private Integer degree;
-  private String experience;
-  private Date graduationTime;
-  private String orderNo;
+/**
+ * @Description  
+ * @Author
+ * @Date 2020-03-07 
+ */
 
+@Entity
+@Table ( name ="sys_user_info" )
+public class UserInfo implements Serializable {
 
-  public Integer getId() {
-    return id;
-  }
+	private static final long serialVersionUID =  4428862416774062511L;
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
+   	@Column(name = "id" )
+	private Long id;
 
-  public Integer getUserId() {
-    return userId;
-  }
+	/**
+	 * 用户id
+	 */
+   	@Column(name = "user_id" )
+	private Long userId;
 
-  public void setUserId(Integer userId) {
-    this.userId = userId;
-  }
+	/**
+	 * 等级
+	 */
+   	@Column(name = "gender" )
+	private String gender;
 
-  public String getGender() {
-    return gender;
-  }
+	/**
+	 * 邮箱
+	 */
+   	@Column(name = "email" )
+	private String email;
 
-  public void setGender(String gender) {
-    this.gender = gender;
-  }
+	/**
+	 * 生日
+	 */
+   	@Column(name = "birthday_date" )
+	private Date birthdayDate;
 
-  public String getEmail() {
-    return email;
-  }
+	/**
+	 * 电话
+	 */
+   	@Column(name = "phone" )
+	private String phone;
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+	/**
+	 * 移动电话
+	 */
+   	@Column(name = "telephone" )
+	private String telephone;
 
-  public Date getBirthdayDate() {
-    return birthdayDate;
-  }
+	/**
+	 * 排序号
+	 */
+   	@Column(name = "sort_number" )
+	private String sortNumber;
 
-  public void setBirthdayDate(Date birthdayDate) {
-    this.birthdayDate = birthdayDate;
-  }
+	/**
+	 * 说明
+	 */
+   	@Column(name = "remake" )
+	private String remake;
 
-  public String getPhone() {
-    return phone;
-  }
+	/**
+	 * 名字
+	 */
+   	@Column(name = "name" )
+	private String name;
 
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
+   	@Column(name = "school" )
+	private String school;
 
-  public String getTelephone() {
-    return telephone;
-  }
+	/**
+	 * 专业
+	 */
+   	@Column(name = "major" )
+	private String major;
 
-  public void setTelephone(String telephone) {
-    this.telephone = telephone;
-  }
+	/**
+	 * 毕业时间
+	 */
+   	@Column(name = "fraduation_date" )
+	private Date fraduationDate;
 
-  public String getSortNumber() {
-    return sortNumber;
-  }
+	/**
+	 * 笔记地址
+	 */
+   	@Column(name = "note_address" )
+	private String noteAddress;
 
-  public void setSortNumber(String sortNumber) {
-    this.sortNumber = sortNumber;
-  }
+	/**
+	 * 年龄
+	 */
+   	@Column(name = "age" )
+	private Long age;
 
-  public String getRemake() {
-    return remake;
-  }
+	/**
+	 * 学历
+	 */
+   	@Column(name = "eduction" )
+	private String eduction;
 
-  public void setRemake(String remake) {
-    this.remake = remake;
-  }
+	/**
+	 * 工资
+	 */
+   	@Column(name = "salary" )
+	private Long salary;
 
-  public String getName() {
-    return name;
-  }
+	/**
+	 * 入职日期
+	 */
+   	@Column(name = "jion_Date" )
+	private Date jionDate;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	/**
+	 * 等级
+	 */
+   	@Column(name = "degree" )
+	private Long degree;
 
-  public String getSchool() {
-    return school;
-  }
+	/**
+	 * 工作经历
+	 */
+   	@Column(name = "experience" )
+	private String experience;
 
-  public void setSchool(String school) {
-    this.school = school;
-  }
+	/**
+	 * 毕业时间
+	 */
+   	@Column(name = "graduation_Time" )
+	private Date graduationTime;
 
-  public String getMajor() {
-    return major;
-  }
+	/**
+	 * 说明
+	 */
+   	@Column(name = "order_No" )
+	private String orderNo;
 
-  public void setMajor(String major) {
-    this.major = major;
-  }
+	/**
+	 * 岗位
+	 */
+   	@Column(name = "station" )
+	private String station;
 
-  public Date getFraduationDate() {
-    return fraduationDate;
-  }
+	public Long getId() {
+		return this.id;
+	}
 
-  public void setFraduationDate(Date fraduationDate) {
-    this.fraduationDate = fraduationDate;
-  }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-  public String getNoteAddress() {
-    return noteAddress;
-  }
+	public Long getUserId() {
+		return this.userId;
+	}
 
-  public void setNoteAddress(String noteAddress) {
-    this.noteAddress = noteAddress;
-  }
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 
-  public Integer getAge() {
-    return age;
-  }
+	public String getGender() {
+		return this.gender;
+	}
 
-  public void setAge(Integer age) {
-    this.age = age;
-  }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-  public String getEduction() {
-    return eduction;
-  }
+	public String getEmail() {
+		return this.email;
+	}
 
-  public void setEduction(String eduction) {
-    this.eduction = eduction;
-  }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-  public Integer getSalary() {
-    return salary;
-  }
+	public Date getBirthdayDate() {
+		return this.birthdayDate;
+	}
 
-  public void setSalary(Integer salary) {
-    this.salary = salary;
-  }
+	public void setBirthdayDate(Date birthdayDate) {
+		this.birthdayDate = birthdayDate;
+	}
 
-  public Date getJoinDate() {
-    return joinDate;
-  }
+	public String getPhone() {
+		return this.phone;
+	}
 
-  public void setJoinDate(Date joinDate) {
-    this.joinDate = joinDate;
-  }
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-  public Integer getDegree() {
-    return degree;
-  }
+	public String getTelephone() {
+		return this.telephone;
+	}
 
-  public void setDegree(Integer degree) {
-    this.degree = degree;
-  }
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
-  public String getExperience() {
-    return experience;
-  }
+	public String getSortNumber() {
+		return this.sortNumber;
+	}
 
-  public void setExperience(String experience) {
-    this.experience = experience;
-  }
+	public void setSortNumber(String sortNumber) {
+		this.sortNumber = sortNumber;
+	}
 
-  public Date getGraduationTime() {
-    return graduationTime;
-  }
+	public String getRemake() {
+		return this.remake;
+	}
 
-  public void setGraduationTime(Date graduationTime) {
-    this.graduationTime = graduationTime;
-  }
+	public void setRemake(String remake) {
+		this.remake = remake;
+	}
 
-  public String getOrderNo() {
-    return orderNo;
-  }
+	public String getName() {
+		return this.name;
+	}
 
-  public void setOrderNo(String orderNo) {
-    this.orderNo = orderNo;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSchool() {
+		return this.school;
+	}
+
+	public void setSchool(String school) {
+		this.school = school;
+	}
+
+	public String getMajor() {
+		return this.major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public Date getFraduationDate() {
+		return this.fraduationDate;
+	}
+
+	public void setFraduationDate(Date fraduationDate) {
+		this.fraduationDate = fraduationDate;
+	}
+
+	public String getNoteAddress() {
+		return this.noteAddress;
+	}
+
+	public void setNoteAddress(String noteAddress) {
+		this.noteAddress = noteAddress;
+	}
+
+	public Long getAge() {
+		return this.age;
+	}
+
+	public void setAge(Long age) {
+		this.age = age;
+	}
+
+	public String getEduction() {
+		return this.eduction;
+	}
+
+	public void setEduction(String eduction) {
+		this.eduction = eduction;
+	}
+
+	public Long getSalary() {
+		return this.salary;
+	}
+
+	public void setSalary(Long salary) {
+		this.salary = salary;
+	}
+
+	public Date getJionDate() {
+		return this.jionDate;
+	}
+
+	public void setJionDate(Date jionDate) {
+		this.jionDate = jionDate;
+	}
+
+	public Long getDegree() {
+		return this.degree;
+	}
+
+	public void setDegree(Long degree) {
+		this.degree = degree;
+	}
+
+	public String getExperience() {
+		return this.experience;
+	}
+
+	public void setExperience(String experience) {
+		this.experience = experience;
+	}
+
+	public Date getGraduationTime() {
+		return this.graduationTime;
+	}
+
+	public void setGraduationTime(Date graduationTime) {
+		this.graduationTime = graduationTime;
+	}
+
+	public String getOrderNo() {
+		return this.orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
+	public String getStation() {
+		return this.station;
+	}
+
+	public void setStation(String station) {
+		this.station = station;
+	}
 }

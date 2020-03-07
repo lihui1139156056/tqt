@@ -1,39 +1,58 @@
 package com.yaorange.tqt.pojo;
+import javax.persistence.*;
+import java.io.Serializable;
 
-import javax.persistence.Id;
-import javax.persistence.Table;
+/**
+ * @Description  
+ * @Author
+ * @Date 2020-03-06 
+ */
 
-@Table(name = "tea_course")
-public class TeaCourse {
-  @Id
-  private Long courseId;
-  private String name;
-  private Long state;
+@Entity
+@Table ( name ="tea_course" )
+public class TeaCourse  implements Serializable {
 
-
-  public Long getCourseId() {
-    return courseId;
-  }
-
-  public void setCourseId(Long courseId) {
-    this.courseId = courseId;
-  }
+	private static final long serialVersionUID =  7213754974831798333L;
 
 
-  public String getName() {
-    return name;
-  }
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+   	@Column(name = "course_id" )
+	private Long courseId;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	/**
+	 * 课程名
+	 */
+   	@Column(name = "name" )
+	private String name;
 
-  public Long getState() {
-    return state;
-  }
+	/**
+	 * 状态：0未启用，1启用
+	 */
+   	@Column(name = "status" )
+	private Long status;
 
-  public void setState(Long state) {
-    this.state = state;
-  }
+	public Long getCourseId() {
+		return this.courseId;
+	}
 
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Long getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(Long status) {
+		this.status = status;
+	}
 }

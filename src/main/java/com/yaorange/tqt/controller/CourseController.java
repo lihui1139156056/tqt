@@ -3,6 +3,7 @@ package com.yaorange.tqt.controller;
 import com.yaorange.tqt.pojo.TeaCourse;
 import com.yaorange.tqt.service.CourseService;
 import com.yaorange.tqt.utils.PageResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,8 +44,8 @@ public class CourseController {
         return 0;
     }
     @GetMapping("/all")
-    public List<TeaCourse> findAll(){
-        List<TeaCourse> courseList=courseService.findAll();
+    public List<TeaCourse> findAll() {
+        List<TeaCourse> courseList = courseService.findAll();
         return courseList;
     }
 }
