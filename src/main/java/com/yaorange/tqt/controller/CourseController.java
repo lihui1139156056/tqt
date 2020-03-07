@@ -1,20 +1,20 @@
 package com.yaorange.tqt.controller;
 
 import com.yaorange.tqt.pojo.TeaCourse;
-import com.yaorange.tqt.service.CourseService;
+
+import com.yaorange.tqt.service.Impl.NewCourseServiceImpl;
 import com.yaorange.tqt.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/course")
 public class CourseController {
-    @Resource
-    private CourseService courseService;
+    @Autowired
+    private NewCourseServiceImpl courseService;
 
     @GetMapping
     public ResponseEntity<PageResult<TeaCourse>> getPage(

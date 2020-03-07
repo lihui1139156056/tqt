@@ -33,7 +33,7 @@ public class FeedBackServiceImpl implements FeedBackService {
     private FeedBackMapper feedBackMapper;
 
     @Autowired
-    private CourseServiceImpl courseService;
+    private NewCourseServiceImpl courseService;
 
     @Autowired
     private UserServiceImpl userService;

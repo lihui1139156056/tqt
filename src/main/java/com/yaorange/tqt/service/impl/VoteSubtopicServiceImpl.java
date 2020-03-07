@@ -1,9 +1,7 @@
 package com.yaorange.tqt.service.Impl;
 
 import com.yaorange.tqt.mapper.VoteSubtopicMapper;
-import com.yaorange.tqt.mapper.VoteTopicMapper;
 import com.yaorange.tqt.pojo.Votesubtopic;
-import com.yaorange.tqt.pojo.Votetopic;
 import com.yaorange.tqt.service.VoteSubtopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
